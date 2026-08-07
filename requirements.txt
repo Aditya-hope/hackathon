@@ -1,0 +1,15 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+python-multipart>=0.0.9
+
+# Document processing
+pymupdf>=1.24
+
+# LLM providers
+google-genai>=0.5
+groq>=0.9
+openai>=1.30
+
+python-dotenv>=1.0

@@ -1,0 +1,16 @@
+Vendor: Meridian Office Supplies
+Invoice Number: INV-48213
+Invoice Date: 2026-07-14
+Currency: USD
+
+Line Items:
+1. Desk chairs (x4)              1,240.00
+2. Standing desks (x2)             980.00
+3. Monitor arms (x6)               540.00
+
+Subtotal: 2,760.00
+Tax: 220.80
+Total Amount: 2,980.80
+
+Payment Terms: Net 30
+Notes: Please remit payment to the accounts payable address on file.

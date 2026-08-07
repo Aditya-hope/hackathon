@@ -1,0 +1,47 @@
+name: Backend CI
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "InvoicePilot_AI_Stabilized_v4/Agentic_Ai/**"
+      - ".github/workflows/backend-ci.yml"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "InvoicePilot_AI_Stabilized_v4/Agentic_Ai/**"
+      - ".github/workflows/backend-ci.yml"
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: InvoicePilot_AI_Stabilized_v4/Agentic_Ai
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            InvoicePilot_AI_Stabilized_v4/Agentic_Ai/requirements.txt
+            InvoicePilot_AI_Stabilized_v4/Agentic_Ai/requirements-dev.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      - name: Byte-compile check (fails fast on any syntax error)
+        run: python -m py_compile $(find app -name "*.py")
+
+      - name: Run pytest
+        run: pytest -v
