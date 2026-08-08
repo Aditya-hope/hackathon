@@ -6,7 +6,7 @@ import { test as base, expect } from "@playwright/test";
  * — health checks, invoice processing, approvals, chat — goes to
  * this origin unless the user changes it in Settings.
  */
-export const BACKEND_ORIGIN = "https://hackathon-xhw8.onrender.com";
+export const BACKEND_ORIGIN = "https://invoicepilot-backend.onrender.com";
 
 /**
  * A `test` that always intercepts and aborts calls to the live
