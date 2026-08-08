@@ -19,7 +19,7 @@ test.describe("AI Copilot", () => {
     await page.getByRole("button", { name: "Summarize this invoice" }).click();
 
     // User turn renders first, then the assistant's mock answer.
-    await expect(page.getByText("Summarize this invoice", { exact: true })).toBeVisible();
+    await expect(page.locator(".ip-chat-user").getByText("Summarize this invoice", { exact: true })).toBeVisible();
     await expect(page.getByText(/billed/)).toBeVisible({ timeout: 10_000 });
   });
 

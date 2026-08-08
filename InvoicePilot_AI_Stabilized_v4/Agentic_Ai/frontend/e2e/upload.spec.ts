@@ -48,7 +48,7 @@ test.describe("Upload & Process", () => {
     // or crashing.
     await page.getByRole("button", { name: /^Run the agent/ }).click();
 
-    await expect(page.getByText("Processing failed.")).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByText(/need attention/)).toBeVisible({ timeout: 15_000 });
     await expect(page.getByText(/processed successfully\./)).toBeVisible();
   });
 

@@ -28,7 +28,7 @@ test.describe("Approval Queue", () => {
     await modal.getByRole("button", { name: "Approve" }).click();
 
     await expect(page.getByText("Invoice approved.")).toBeVisible();
-    await expect(modal).not.toBeVisible();
+    await expect(page.getByRole("heading", { name: "Approve invoice" })).not.toBeVisible();
   });
 
   test("rejecting an item records the decision", async ({ page }) => {
