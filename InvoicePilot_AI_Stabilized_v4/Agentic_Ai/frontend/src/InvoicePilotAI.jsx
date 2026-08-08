@@ -1937,7 +1937,7 @@ function ChatPage({ history, activeResult, preselectId, apiCall, addToast, conne
 export default function InvoicePilotAI() {
   const [theme, setTheme] = useState("dark");
   const [page, setPage] = useState("dashboard");
-  const [apiBase, setApiBase] = useState("https://invoicepilot-backend.onrender.com");
+  const [apiBase, setApiBase] = useState("https://hackathon-2-uyjx.onrender.com");
   const [showSettings, setShowSettings] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [health, setHealth] = useState({ connected: false, lastTested: false });
